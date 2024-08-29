@@ -10,8 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_29_193943) do
-# Could not dump table "art_pieces" because of following StandardError
-#   Unknown type 'uuid' for column 'id'
+ActiveRecord::Schema[7.2].define(version: 2024_08_29_195747) do
+  create_table "art_pieces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.float "price"
+    t.integer "types_id"
+    t.index ["types_id"], name: "index_art_pieces_on_types_id"
+  end
 
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "art_pieces", "types", column: "types_id"
 end
