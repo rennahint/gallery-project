@@ -10,8 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_29_193943) do
-# Could not dump table "art_pieces" because of following StandardError
-#   Unknown type 'uuid' for column 'id'
+ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
+  create_table "art_pieces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.float "price"
+    t.integer "types_id"
+    t.index ["types_id"], name: "index_art_pieces_on_types_id"
+  end
 
+  create_table "commissions", force: :cascade do |t|
+    t.string "email_address"
+    t.string "user_first_name"
+    t.string "user_last_name"
+    t.string "commission_description"
+    t.float "commission_budget"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "art_pieces_id"
+    t.integer "users_id"
+    t.index ["art_pieces_id"], name: "index_commissions_on_art_pieces_id"
+    t.index ["users_id"], name: "index_commissions_on_users_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email_address"
+    t.string "user_first_name"
+    t.string "user_last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "art_pieces", "types", column: "types_id"
+  add_foreign_key "commissions", "art_pieces", column: "art_pieces_id"
+  add_foreign_key "commissions", "users", column: "users_id"
 end
