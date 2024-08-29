@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,9 +34,9 @@ export default function RootLayout({
         <title>Renna's Gallery and Commissions</title>
       </head>
       <body>
-        <header>My App Header</header>
+        < Header />
         <main>{children}</main>
-        <footer>My App Footer</footer>
+        < Footer />
       </body>
     </html>
   );
