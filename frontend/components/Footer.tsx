@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-      <footer className="flex">
+      <footer>
         <nav >
-          <ul className="flex flex-row">
+          <ul className="flex flex-row bg-gradient-to-r from-yellow-700 from-30%">
             <li className="p-4">
               <Link href="https://www.instagram.com">Instagram</Link>
             </li>

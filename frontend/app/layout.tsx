@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <title>Renna's Gallery and Commissions</title>
+        <title>FlynnFrost Gallery and Commissions</title>
       </head>
       <body>
         < Header />

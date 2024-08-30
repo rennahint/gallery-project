@@ -5,7 +5,7 @@ export default function Header() {
       
     <header >
       <nav >
-        <ul className="flex flex-row">
+        <ul className=" bg-gradient-to-r from-yellow-700 from-30% flex flex-row">
           <li className="p-4">
             <Link href="/">Home</Link>
           </li>
