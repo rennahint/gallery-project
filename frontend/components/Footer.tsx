@@ -4,7 +4,7 @@ export default function Footer() {
     return (
       <footer>
         <nav >
-          <ul className="flex flex-row bg-gradient-to-r from-yellow-700 from-30%">
+          <ul className="flex flex-row bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900 from-10%">
             <li className="p-4">
               <Link href="https://www.instagram.com">Instagram</Link>
             </li>
