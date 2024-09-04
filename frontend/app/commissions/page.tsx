@@ -5,19 +5,17 @@ import PageHeaderBanner from "@/components/PageHeaderBanner"
 
 export default function Commissions() {
     return (
-      <main className="flex min-h-screen flex-col items-center p-24">
-            
-            
+      <main className="flex min-h-screen flex-col items-center bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-500 to-zinc-300">
             < PageHeaderBanner 
                 src="/black-background-with-shoe.png" // Path to your image
-                alt="Balck background with Naruto Shoe design"
-                width={400}
-                height={100}
-                pageTitle="Commissions"
+                alt="Black background with Naruto Shoe design"
+                width={300}
+                height={300}
+                pageTitle="Looking at getting a Commissioned Design?"
                 pageDescription="To get a custom shoe design, please use the form below to start an inquiry about a commission!"
             />
             
-            <div className='flex p-8 justify-center items-center h-screen flex-col w-max'>
+            <div className='flex justify-center items-center flex-col pt-16'>
                 <form className='flex flex-col p-3 w-96 h-inherit'>
                     <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-2.5' id='email' type='email' aria-label='email address' placeholder='Enter your email address' />
                     <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-2.5' id='name' type='string' aria-label='name' placeholder='Enter your first and last name' />

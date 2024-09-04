@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription  }) => {
+const ButtonBanner = ({ src, alt, width, height, pageTitle, pageDescription  }) => {
     return (
-        <div className="flex justify-center flex-col lg:flex-row pt-20"> 
+        <div className="flex justify-center flex-col lg:flex-row bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-500 to-zinc-300"> 
             <Image
                     className="flex content-center w-auto lg:w-96"
                     src={src}
@@ -15,7 +15,7 @@ const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription 
                     
                     //layout="responsive" // or "fixed", "intrinsic", etc., based on your needs
             />
-            <div className="mytext flex flex-col bg-gradient-to-b text-orange-50 bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900 from-5%">
+            <div className="mytext flex flex-col bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-500 to-zinc-300">
                 <div className=" flex title text-5xl p-10 justify-center">
                     {pageTitle}
                 </div>
@@ -29,7 +29,7 @@ const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription 
 };
 
 // Optional: Define prop types for better type checking and documentation
-PageHeaderBanner.propTypes = {
+ButtonBanner.propTypes = {
     src: PropTypes.string.isRequired, // `src` is required, so you might want to make sure it's always provided
     alt: PropTypes.string,
     width: PropTypes.number,
@@ -37,4 +37,4 @@ PageHeaderBanner.propTypes = {
     pageTitle: PropTypes.string.isRequired
 };
 
-export default PageHeaderBanner;
+export default ButtonBanner;
