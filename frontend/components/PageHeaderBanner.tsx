@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription  }) => {
     return (
-        <div className="flex justify-center flex-col lg:flex-row pt-20"> 
+        <div className="flex justify-center flex-col lg:flex-row pt-20 text-orange-50"> 
             <Image
                     className="flex content-center w-auto lg:w-96"
                     src={src}
