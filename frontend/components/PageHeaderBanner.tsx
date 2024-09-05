@@ -15,7 +15,7 @@ const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription 
                     
                     //layout="responsive" // or "fixed", "intrinsic", etc., based on your needs
             />
-            <div className="mytext flex flex-col bg-gradient-to-b text-orange-50 bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900 from-5%">
+            <div className="mytext flex flex-col bg-gradient-to-b text-orange-50 bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900 from-5%">
                 <div className=" flex title text-5xl p-10 justify-center">
                     {pageTitle}
                 </div>

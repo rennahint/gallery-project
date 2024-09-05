@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from 'next/link';
 import PageHeaderBanner from "@/components/PageHeaderBanner"
+import LeftImageButtonBanner from '@/components/LeftImageButtonBanner';
+import RightImageButtonBanner from '@/components/RightImageButtonBanner';
 
 export default function Home() {
   return (
@@ -15,9 +17,26 @@ export default function Home() {
                 pageTitle="FlynnFrost Art Gallery and Commissions"
                 pageDescription=""
           />
-      <Link  className="bg-orange-900 text-orange-50" href="/gallery">Check out the artwork </Link>
 
-      <Link className="bg-orange-900 text-orange-50" href="/about">Learn more about me </Link>
+< LeftImageButtonBanner
+          src="/black-background-with-shoe.png" // Path to your image
+          alt="Black background with Naruto Shoe design"
+          width={300}
+          height={300}
+          buttonTitle="Learn More About Me"
+          pageDescription=""
+          pageLink="/commissions"
+        />
+
+        < RightImageButtonBanner
+          src="/black-background-with-shoe.png" // Path to your image
+          alt="Black background with Naruto Shoe design"
+          width={300}
+          height={300}
+          buttonTitle="Checkout My Art"
+          pageDescription=""
+          pageLink="/gallery"
+        /> 
     </main>
   );
 }

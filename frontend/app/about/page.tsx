@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import PageHeaderBanner from "@/components/PageHeaderBanner"
+import LeftImageButtonBanner from '@/components/LeftImageButtonBanner';
+import RightImageButtonBanner from '@/components/RightImageButtonBanner';
 
 export default function About() {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center">
 
           < PageHeaderBanner 
                 src="/black-background-with-shoe.png" // Path to your image
@@ -14,9 +16,25 @@ export default function About() {
                 pageDescription="I'm Finn Walters, creater of custom shoes, and custom artwork"
             />
 
-        <Link className="bg-orange-900 text-orange-50" href="/commissions">Create a Commission </Link>
+        < LeftImageButtonBanner
+          src="/black-background-with-shoe.png" // Path to your image
+          alt="Black background with Naruto Shoe design"
+          width={300}
+          height={300}
+          buttonTitle="Create a Commission"
+          pageDescription=""
+          pageLink="/commissions"
+        />
 
-        <Link className="bg-orange-900 text-orange-50" href="/gallery"> Checkout my Art </Link>
+        < RightImageButtonBanner
+          src="/black-background-with-shoe.png" // Path to your image
+          alt="Black background with Naruto Shoe design"
+          width={300}
+          height={300}
+          buttonTitle="Checkout My Art"
+          pageDescription=""
+          pageLink="/gallery"
+        />    
        </main>
     )
 }
