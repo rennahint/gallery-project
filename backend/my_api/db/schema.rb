@@ -22,17 +22,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
   end
 
   create_table "commissions", force: :cascade do |t|
-    t.string "email_address"
-    t.string "user_first_name"
-    t.string "user_last_name"
-    t.string "commission_description"
-    t.float "commission_budget"
+    t.string "description"
+    t.float "budget"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "art_pieces_id"
-    t.integer "users_id"
-    t.index ["art_pieces_id"], name: "index_commissions_on_art_pieces_id"
-    t.index ["users_id"], name: "index_commissions_on_users_id"
+    t.integer "art_piece_id"
+    t.integer "user_id"
+    t.index ["art_piece_id"], name: "index_commissions_on_art_piece_id"
+    t.index ["user_id"], name: "index_commissions_on_user_id"
   end
 
   create_table "types", force: :cascade do |t|
@@ -43,13 +40,13 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
 
   create_table "users", force: :cascade do |t|
     t.string "email_address"
-    t.string "user_first_name"
-    t.string "user_last_name"
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "art_pieces", "types", column: "types_id"
-  add_foreign_key "commissions", "art_pieces", column: "art_pieces_id"
-  add_foreign_key "commissions", "users", column: "users_id"
+  add_foreign_key "commissions", "art_pieces"
+  add_foreign_key "commissions", "users"
 end
