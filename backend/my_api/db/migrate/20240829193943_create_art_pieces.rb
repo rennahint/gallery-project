@@ -6,6 +6,7 @@ class CreateArtPieces < ActiveRecord::Migration[7.2]
       t.string :title
       t.string :description
       t.float :price
+      t.integer :art_type, default: 0
     end
   end
 end

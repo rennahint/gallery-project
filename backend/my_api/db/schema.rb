@@ -17,8 +17,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
     t.string "title"
     t.string "description"
     t.float "price"
-    t.integer "types_id"
-    t.index ["types_id"], name: "index_art_pieces_on_types_id"
+    t.integer "art_type", default: 0
+    t.integer "commission_id"
+    t.index ["commission_id"], name: "index_art_pieces_on_commission_id"
   end
 
   create_table "commissions", force: :cascade do |t|
@@ -26,16 +27,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
     t.float "budget"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "art_piece_id"
     t.integer "user_id"
-    t.index ["art_piece_id"], name: "index_commissions_on_art_piece_id"
     t.index ["user_id"], name: "index_commissions_on_user_id"
-  end
-
-  create_table "types", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,7 +39,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_29_231813) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "art_pieces", "types", column: "types_id"
-  add_foreign_key "commissions", "art_pieces"
+  add_foreign_key "art_pieces", "commissions"
   add_foreign_key "commissions", "users"
 end
