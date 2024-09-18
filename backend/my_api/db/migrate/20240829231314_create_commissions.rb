@@ -6,6 +6,6 @@ class CreateCommissions < ActiveRecord::Migration[7.2]
 
       t.timestamps
     end
-    add_reference :art_pieces, :commission, foreign_key: true
+    
   end
 end

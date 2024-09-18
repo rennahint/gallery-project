@@ -1,7 +1,7 @@
 class Commission < ApplicationRecord
 
   belongs_to :user
-  belongs_to :art_piece
-  validates :description, presence: true
+  has_many :art_piece
+  validates :description, :budget, presence: true
   
 end

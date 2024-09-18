@@ -8,6 +8,6 @@ class CreateUsers < ActiveRecord::Migration[7.2]
 
       t.timestamps
     end
-    add_reference :commissions, :user, foreign_key: true
+    
   end
 end
