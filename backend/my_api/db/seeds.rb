@@ -34,19 +34,22 @@ budget: 90.00,
 user: user1)
 
 # Create artpieces associated with the commissions
-ArtPiece.create(title: "Black Sky with Tardis",
+ArtPiece.create(
+title: "Black Sky with Tardis",
 description: "black shoes with tardis",
 price: 75.00,
 art_type: :painting, 
 commission: commission1)
 
-ArtPiece.create(title: "Naruto Shoes", 
+ArtPiece.create(
+title: "Naruto Shoes", 
 description: "red shoes with Naruto character and symbols",
 price: 85.00,
 art_type: :shoes,
 commission: commission2)
 
-ArtPiece.create(title: "How To Train Your Dragon Shoes", 
+ArtPiece.create(
+title: "How To Train Your Dragon Shoes", 
 description: "Blue and Grey background with Hiccup and Toothless",
 price: 90.00,
 art_type: :shoes,
