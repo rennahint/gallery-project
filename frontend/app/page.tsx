@@ -15,7 +15,7 @@ export default function Home() {
                 width={300}
                 height={300}
                 pageTitle="FlynnFrost Art Gallery and Commissions"
-                pageDescription=""
+                pageDescription="Check out my Gallery for all artwork I've created. If you like what you see, submit your own commission design!"
           />
 
 < LeftImageButtonBanner
@@ -23,6 +23,7 @@ export default function Home() {
           alt="Black background with Naruto Shoe design"
           width={300}
           height={300}
+          pageTitle="Wanna learn more about the artist?"
           buttonTitle="Learn More About Me"
           pageDescription=""
           pageLink="/commissions"
@@ -33,7 +34,8 @@ export default function Home() {
           alt="Black background with Naruto Shoe design"
           width={300}
           height={300}
-          buttonTitle="Checkout My Art"
+          pageTitle="Interested in my Art?"
+          buttonTitle="View my Art"
           pageDescription=""
           pageLink="/gallery"
         /> 

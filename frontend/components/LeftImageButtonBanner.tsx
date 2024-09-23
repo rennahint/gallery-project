@@ -3,12 +3,12 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const LeftImageButtonBanner = ({ src, alt, width, height, buttonTitle, pageDescription, pageLink}) => {
+const LeftImageButtonBanner = ({ src, alt, width, height, buttonTitle,pageTitle, pageDescription, pageLink}) => {
     return (
         <div className="flex justify-center flex-col lg:flex-row pt-20 text-orange-50"> 
             <div className="mytext flex flex-col justify-center bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-700 via-zinc-500 to-zinc-300">
                 <div className=" flex title text-5xl p-10 justify-center">
-                    {buttonTitle}
+                    {pageTitle}
                 </div>
                 <Link className="pl-40 bg-zinc-300 w-1/5 text-orange-50" href={pageLink} > {buttonTitle} </Link>
 

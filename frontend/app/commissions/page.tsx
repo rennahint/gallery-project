@@ -18,19 +18,18 @@ export default async function Commissions() {
                 pageDescription="To get a custom shoe design, please use the form below to start an inquiry about a commission!"
             />
             
-            
-            
             <div className="w-max">
                 <div className=" flex justify-center text-3xl text-orange-50">
                     Submit a Commission
                 </div>
                 <form className='flex flex-col p-3 w-128 h-inherit text-center'>
                     <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-5' id='email' type='email' aria-label='email address' placeholder='Email Address' />
-                    <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-5 ' id='name' type='string' aria-label='name' placeholder='First and Last Name' />
+                    <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-5 ' id='first_name' type='string' aria-label='first_name' placeholder='First Name' />
+                    <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-5 ' id='last_name' type='string' aria-label='last_name' placeholder='Last Name' />
                     <textarea name="text" rows={5} cols={10} wrap="soft" className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 ' placeholder='Description of design'></textarea>
                     <input className='bg-gray-200 shadow-inner rounded-l p-2 flex-1 max-h-5 ' id='name' type='string' aria-label='name' placeholder='Budget for Commission' />
                     <button className='bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r' type='submit'>
-                    Send
+                        Send
                     </button>
                 </form>
             </div>

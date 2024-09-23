@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription  }) => {
     return (
-        <div className="flex justify-center flex-col lg:flex-row pt-20 text-orange-50"> 
+        <div className="flex lg:w-screen justify-center flex-col lg:flex-row pt-20 text-orange-50"> 
             <Image
                     className="flex content-center w-auto lg:w-96"
                     src={src}
@@ -30,7 +30,7 @@ const PageHeaderBanner = ({ src, alt, width, height, pageTitle, pageDescription 
 
 // Optional: Define prop types for better type checking and documentation
 PageHeaderBanner.propTypes = {
-    src: PropTypes.string.isRequired, // `src` is required, so you might want to make sure it's always provided
+    src: PropTypes.string, // `src` is required, so you might want to make sure it's always provided
     alt: PropTypes.string,
     width: PropTypes.number,
     height: PropTypes.number,

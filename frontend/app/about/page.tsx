@@ -21,6 +21,7 @@ export default function About() {
           alt="Black background with Naruto Shoe design"
           width={300}
           height={300}
+          pageTitle="Interested in a Custom Design?"
           buttonTitle="Create a Commission"
           pageDescription=""
           pageLink="/commissions"
@@ -31,7 +32,8 @@ export default function About() {
           alt="Black background with Naruto Shoe design"
           width={300}
           height={300}
-          buttonTitle="Checkout My Art"
+          pageTitle="Interested in my Art?"
+          buttonTitle="View my Art"
           pageDescription=""
           pageLink="/gallery"
         />    
