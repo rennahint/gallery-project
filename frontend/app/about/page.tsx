@@ -13,7 +13,7 @@ export default function About() {
                 width={300}
                 height={300}
                 pageTitle="About Me"
-                pageDescription="I'm Finn Walters, creater of custom shoes, and custom artwork"
+                pageDescription="I'm Finn Walters, creater of custom shoes, and custom artwork. I create fun art!"
             />
 
         < LeftImageButtonBanner
